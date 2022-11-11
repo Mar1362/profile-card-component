@@ -1,0 +1,100 @@
+:root{
+    --color-dark-cyan: hsl(185, 75%, 39%);
+    --color-very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --color-dark-grayish-blue: hsl(227, 10%, 46%);
+    --color-gray: hsl(0, 0%, 59%);
+}
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+    background: url(images/bg-pattern-top.svg) no-repeat fixed, url(images/bg-pattern-bottom.svg) no-repeat fixed, var(--color-dark-cyan);
+    background-size: contain, contain;
+    background-position: -50vw -50vw, 50vw 120vw ;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.profile-card{
+    width: 85%;
+    max-width: 362px;
+    margin: 4% auto;
+    border-radius: 20px;
+    background: url(images/bg-pattern-card.svg) no-repeat top, white;
+    background-size: 100% 40%;
+    border: 1px solid var(--color-dark-grayish-blue);
+}
+.profile-card__figure{
+    border-radius: 50%;
+    width: max-content;
+    background-color: white;
+    box-sizing: content-box;
+    padding: 1.5%;
+    display: flex; /* this is just for getting the image centered inside the figure */
+    margin: 0 auto;
+    margin-top: 30%;
+}
+.profile-card__figure img{
+    width: 100%;
+    border-radius: 50%;
+}
+.profile-card__name-age{
+    margin-top: 5%;
+    text-align: center;
+    font-family: "Kumbh Sans", cursive, auto;
+    font-weight: 700;
+    font-size: 18px;
+}
+.profile-card__name-age span{
+    color: var(--color-gray);
+    font-weight: 400;
+}
+.profile-card__city{
+    font-family: "Kumbh Sans", auto;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: var(--color-gray);
+    margin-top: 1%;
+}
+
+.profile-card__stats{
+    margin-top: 8%;
+    border-top: 1px solid var(--color-gray);
+    padding: 5%;
+}
+.profile-card__stats ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+.profile-card__stats ul li{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.profile-card__stats ul li span:first-child{
+    font-size: 18px;
+    font-family: "Kumbh Sans", auto;
+    font-weight: 700;
+}
+.profile-card__stats ul li span:last-child{
+    color: var(--color-gray);
+    font-family: "Kumbh Sans", cursive, auto;
+    letter-spacing: 1.5px;
+    font-size: x-small;
+}
+
+@media only screen and (min-width: 500px){
+    body{
+        background-position: top -50vh left -30vw, bottom -50vh right -30vw ;
+    }
+}
